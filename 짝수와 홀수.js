@@ -5,15 +5,14 @@
 // - num은 int 범위의 정수입니다.
 // - 0은 짝수입니다.
 
-function solution(num) {
-    var answer = '';
     function solution(num) {
         var answer = '';
           if (num % 2 === 0) { //num의 값을 2로 나눈 나머지가 0일 때
             return answer = "Even" //ture 값
-        } else{
+        } else{ // 홀수
             return answer = "Odd" //else 값
         }
     }
-}
+
+console.log(solution(4))
 
