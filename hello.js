@@ -1,13 +1,8 @@
 console.log("hello")
 
-
-function solution(num) {
-    var answer = '';
-    if (num % 2 === 0) { //num의 값을 2로 나눈 나머지가 0일 때
-        return answer = "Even" //ture 값
-    } else {
-        return answer = "Odd" //else 값
-    }
+function solution1(s) {
+    var answer = 0;
+var answer = parseInt(s);
+    return answer;
 }
-
-console.log(solution(3))
+console.log(solution1(-1234))
