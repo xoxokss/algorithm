@@ -20,12 +20,22 @@ function solution(s) {
 // 나의 풀이
 function solution1(s) {
     var answer = 0;
-let answer = parseInt(s);
+    var answer = parseInt(s); // 문자를 정수형 숫자로 바꿈
     return answer;
 }
-console.log(solution(1234))
 
+// 다른 사람의 풀이
+function solution2(s) {
+    var answer = 0;
+    var answer = Number(s)
+    return answer;
+}
+
+
+// # 공부 메모
 // 구글링으로 javascript sstring to int 라고 검색했다. 제한조건이 있는데, 제한 조건을 벗어나지는 않는지 모르겠다.
+// String() : 숫자를 문자로 
+// Number() : 문자를 숫자로
 // var 변수 = parseInt(문자); 문자를 정수형 숫자로 변환해줌
 // var 변수 = parseFloat(문자); 문자를 실수형 숫자로 변환해줌
 // var 변수 = Nember(문자); 문자를 정수&실수형 숫자로 변환해줌

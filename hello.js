@@ -1,8 +1,14 @@
 console.log("hello")
 
-function solution1(s) {
+
+function solution(numbers) {
     var answer = 0;
-var answer = parseInt(s);
+    for (let i = 0; i < 10; i++) {
+        if(!numbers.includes(i)) answer += i;   // 논리연산자 not "!" : (boolean value) true는 false로 변환
+    }
     return answer;
 }
-console.log(solution1(-1234))
+
+console.log(solution([1,2,3,4,6,7,8,0]))
+
+console.log(solution([5,8,4,0,6,7,9]))
