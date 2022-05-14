@@ -18,7 +18,7 @@ function solution(s) {
 // 증감 연산자 : "++" 값을 증가, "--" 값을 감소
 
 
-// 또다른 문제풀이
+// 다른 문제풀이
 function solution2(s) {
     return s.substr(Math.ceil(s.length / 2) - 1, s.length % 2 === 0 ? 2 : 1);
 }  
