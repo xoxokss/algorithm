@@ -17,14 +17,65 @@ function solution(a, b) {
 
 // 나의 풀이
 function solution(a, b) {
-    var answer = '';
-    let months = [31,29,31,30,31,30,31,31,30,31,30,31]
-    let week=[FRI,SAT,SUN,MON,TUE,WED,THU]
+    let answer = '';
+    let month = -1;
+    let months = [31,29,31,30,31,30,31,31,30,31,30,31] //윤년의 월별 일수
+    let week=['FRI','SAT','SUN','MON','TUE','WED','THU'] //2016년 1월 1일은 금요일
+    for(let i=0; i<a-1;i++){  //1월은 
+        month+=months[i]
+    }
+    month+=b
+    answer = week[month%7]
+    console.log(month)
     return answer;
 }
 
 
 // 다른 풀이
+function solution(a, b) {
+    let answer = '';
+    let months = [31,29,31,30,31,30,31,31,30,31,30,31]; 
+    let week=['FRI','SAT','SUN','MON','TUE','WED','THU']; 
+    let sum=0;
+    for(let i=1; i<a+1;i++){
+        sum=sum+months[i-1]
+    }
+    sum+= b-1;
+    answer=day[sum%7]
+    return answer;
+}
 
 
+function solution(a, b) {
+    // 윤년은 2월이 29일까지 있고, 1년이 366일이다.
+    // 4, 100, 400으로 나누어지는 년도는 윤년이다.
+    const week = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+    const Months = [31,29,31,30,31,30,31,31,30,31,30,31]; 
+    let day = b+4; // 1월 1일은 FRI, b가 1일 때 인덱스로는 5가 되어야한다.
+    // 1월은 이전 월의 일수를 더하지 않음으로 a-1 조건으로 해야한다.
+    for(let i = 0; i < a-1; ++i){
+        day += Months[i];
+    }
+    return week[day%7];
+}
+
+function getDayName(a,b){
+    var arr = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+    var date = new Date(`2016-${a}-${b}`);
+  var day = date.getDay()
+    return arr[day];
+    
+}
+function solution(a, b) {
+    const monthDay = [31,29,31,30,31,30,31,31,30,31,30,31]
+    const weekDay = ["THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED"]
+
+    let days = b
+    for(let i=0 ; i<a-1 ; i++)
+        days += monthDay[i];
+
+    return weekDay[days%7];
+}
+//아래 코드는 테스트를 위한 코드입니다.
+console.log(getDayName(5,24));
 // 공부 메모
