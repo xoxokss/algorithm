@@ -10,10 +10,21 @@
 // - signs[i] 가 참이면 absolutes[i] 의 실제 정수가 양수임을, 그렇지 않으면 음수임을 의미합니다.
 
 // 문제
-
-
+function solution(absolutes, signs) {
+    var answer = 123456789;
+    return answer;
+}
 
 // 나의 풀이
+
+function solution(absolutes, signs) {
+    var answer = 0;
+    for(let i = 0; i < absolutes.length;i++) {
+        if (signs[i] == true) answer += absolutes[i]
+        else answer -= absolutes[i]
+    } 
+    return answer;
+}
 
 // 다른 사람 풀이
 
